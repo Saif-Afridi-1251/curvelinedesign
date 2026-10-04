@@ -31,7 +31,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-[#f7fafc]/95 backdrop-blur-sm">
       <div className={`border-b border-[#e6edf2] transition-shadow duration-300 ${scrolled ? 'shadow-[0_8px_25px_rgba(8,29,45,0.04)]' : ''}`}>
         <Container>
-          <nav className="flex items-center justify-between gap-4 py-4" aria-label="Main navigation">
+          <nav className="flex items-center justify-between gap-6 py-3" aria-label="Main navigation">
             <div className="flex min-w-0 flex-1 items-center justify-start">
               <NavLink to="/" className="flex items-center" aria-label="Curveline home">
               
@@ -45,7 +45,7 @@ const Navbar = () => {
                   key={item.to}
                   to={item.to}
                   className={({ isActive }) =>
-                    `relative text-sm font-medium transition-colors duration-200 ${
+                    `relative text-xl font-lg transition-colors duration-200 ${
                       isActive ? 'text-[#0B78B8]' : 'text-[#20272D] hover:text-[#0B78B8]'
                     }`
                   }
@@ -63,7 +63,7 @@ const Navbar = () => {
             <div className="hidden xl:block">
               <NavLink
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-[8px] bg-[#0B78B8] px-4 py-2.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#07558E]"
+                className="inline-flex items-center gap-2 ml-10 rounded-[8px] bg-[#0B78B8] px-4 py-2.5 text-md font-medium text-white transition-colors duration-300 hover:bg-[#07558E]"
               >
                 Start a Project
                 <ArrowRight className="h-4 w-4" />

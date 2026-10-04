@@ -7,9 +7,9 @@ const ProjectCard = ({ project, featured = false }) => {
 
   return (
     <motion.article
-      whileHover={{ y: -6 }}
-      transition={{ duration: 0.4 }}
-      className={`group relative overflow-hidden rounded-[12px] border border-[#dfeaf0] bg-white ${isLarge ? 'min-h-[420px]' : 'min-h-[260px]'}`}
+      whileHover={{ y: -6, scale: 1.01 }}
+      transition={{ type: 'spring', stiffness: 320, damping: 24 }}
+      className={`group relative overflow-hidden rounded-[12px] border border-[#dfeaf0] bg-white shadow-[0_8px_24px_rgba(13,31,44,0.04)] transition-shadow duration-300 hover:shadow-[0_20px_44px_rgba(13,31,44,0.16)] focus-within:ring-2 focus-within:ring-[#0B78B8] focus-within:ring-offset-2 ${isLarge ? 'min-h-[420px]' : 'min-h-[260px]'}`}
     >
       <Link to={`/projects/${project.slug}`} className="block h-full w-full">
         <div className="relative h-full overflow-hidden">

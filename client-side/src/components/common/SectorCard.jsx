@@ -3,9 +3,9 @@ import { motion } from 'framer-motion'
 const SectorCard = ({ title, image, icon: Icon }) => {
   return (
     <motion.article
-      whileHover={{ y: -5 }}
-      transition={{ duration: 0.35 }}
-      className="group relative overflow-hidden rounded-[10px] border border-[#dfeaf0] bg-white"
+      whileHover={{ y: -6, scale: 1.015 }}
+      transition={{ type: 'spring', stiffness: 320, damping: 24 }}
+      className="group relative overflow-hidden rounded-[10px] border border-[#dfeaf0] bg-white shadow-[0_8px_22px_rgba(13,31,44,0.04)] transition-shadow duration-300 hover:shadow-[0_18px_36px_rgba(13,31,44,0.13)]"
     >
       <div className="relative h-[180px] overflow-hidden">
         <img src={image} alt={title} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />

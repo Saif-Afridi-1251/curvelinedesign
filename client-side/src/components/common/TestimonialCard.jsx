@@ -6,9 +6,10 @@ const TestimonialCard = ({ quote, name, role, image }) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -5, scale: 1.01 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
-      className="relative overflow-hidden rounded-[18px] border border-[#dfeaf0] bg-white p-6 shadow-[0_10px_30px_rgba(13,31,44,0.06)]"
+      transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+      className="relative overflow-hidden rounded-[18px] border border-[#dfeaf0] bg-white p-6 shadow-[0_10px_30px_rgba(13,31,44,0.06)] transition-shadow duration-300 hover:shadow-[0_20px_42px_rgba(13,31,44,0.12)]"
     >
       <div className="mb-5 flex items-center justify-between">
         <div className="flex items-center gap-2 text-[#0B78B8]">
