@@ -39,13 +39,13 @@ const Navbar = () => {
               </NavLink>
             </div>
 
-            <div className="hidden flex-1 items-center justify-center gap-6 xl:flex">
+            <div className="hidden items-center gap-7 xl:flex">
               {navItems.map((item) => (
                 <NavLink
                   key={item.to}
                   to={item.to}
                   className={({ isActive }) =>
-                    `relative whitespace-nowrap text-sm font-medium transition-colors duration-200 ${
+                    `relative text-sm font-medium transition-colors duration-200 ${
                       isActive ? 'text-[#0B78B8]' : 'text-[#20272D] hover:text-[#0B78B8]'
                     }`
                   }
@@ -60,7 +60,7 @@ const Navbar = () => {
               ))}
             </div>
 
-            <div className="hidden flex-1 items-center justify-end xl:flex">
+            <div className="hidden xl:block">
               <NavLink
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-[8px] bg-[#0B78B8] px-4 py-2.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#07558E]"

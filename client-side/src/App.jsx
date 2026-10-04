@@ -25,7 +25,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen bg-[#f7fafc] text-[#20272D]">
         <ScrollToTop />
         <Navbar />
